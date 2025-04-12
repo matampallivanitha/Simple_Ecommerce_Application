@@ -1,6 +1,6 @@
 # Simple_Ecommerce_Application
 
-A simple Ecommerce Application built using **Java**, **HTML,CSS,JavaScript**, and **MySQL** for managing product listings and a shopping cart.
+A simple Ecommerce Application where users can browse electronic products, add them to a cart, and place orders — all with full front-end and back-end integration.
 
 # Project Tasks Covered
 
