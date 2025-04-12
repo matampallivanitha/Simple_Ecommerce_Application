@@ -1,6 +1,6 @@
 # Simple_Ecommerce_Application
 
-A simple Ecommerce Application where users can browse electronic products, add them to a cart, and place orders — all with full front-end and back-end integration.
+A simple Ecommerce Application where users can browse electronic products, add them to a cart — all with full front-end and back-end integration.
 
 # Project Tasks Covered
 
