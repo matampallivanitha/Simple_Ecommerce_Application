@@ -1,0 +1,390 @@
+/* Base Styles */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to right, hsl(233, 55%, 82%), hsl(310, 40%, 50%));
+  overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+/* Header */
+header {
+  background: hsl(314, 24%, 40%);
+  color: #fff;
+  padding: 1.2rem;
+  text-align: center;
+  font-size: 26px;
+  letter-spacing: 1px;
+}
+
+/* NAVIGATION BAR */
+.nav-bar {
+  background: #d6d7c3;
+  padding: 0.5rem 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.nav-left ul {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.nav-left li {
+  color: white;
+  padding: 10px 20px;
+  cursor: pointer;
+  background-color: #555;
+  border-radius: 5px;
+  transition: background 0.2s ease;
+  min-width: 110px;
+  text-align: center;
+}
+
+.nav-left li:hover {
+  background-color: #28a745;
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 10px;
+}
+
+.search-container {
+  display: flex;
+  align-items: center;
+  background: #617b6f;
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+}
+
+.search-container input {
+  padding: 10px;
+  border: none;
+  outline: none;
+  width: 250px;
+  font-size: 14px;
+}
+
+.search-container button {
+  background: #333;
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.cart-button {
+  background-color: #202628;
+  color: #786969;
+  border: none;
+  padding: 10px 14px;
+  border-radius: 5px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: background 0.3s ease;
+}
+
+.cart-button:hover {
+  background-color: #0056b3;
+}
+
+/* PRODUCT LISTING */
+#product-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 1rem 0;
+  margin: 0 auto;
+  max-width: 1400px;
+}
+
+#cart {
+  display: none;
+}
+
+.product {
+  background: #fff;
+  border-radius: 10px;
+  width: 320px;
+  margin: 15px;
+  text-align: center;
+  padding: 1rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+}
+
+.product:hover {
+  transform: scale(1.02);
+}
+
+.product .image-box {
+  background: #f5f5f5;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  height: 280px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.product img {
+  max-height: 100%;
+  max-width: 100%;
+  object-fit: contain;
+}
+
+.product h3 {
+  font-size: 20px;
+  margin: 10px 0 5px;
+}
+
+.product p {
+  font-size: 16px;
+  color: #444;
+}
+
+.product button {
+  background-color: #28a745;
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  margin: 5px 5px 0 5px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.buy-button {
+  background-color: #007bff;
+}
+
+/* Updated CART SECTION - Modern Style */
+.cart {
+  display: none; /* Hide initially */
+  background: rgb(154, 219, 217);
+  padding: 2rem;
+  margin: 2rem auto;
+  border-radius: 16px;
+  max-width: 600px;
+  width: 90%;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease-in-out;
+  position: relative;
+}
+
+.cart h2 {
+  font-size: 24px;
+  text-align: center;
+  color: #222;
+  margin-bottom: 1.5rem;
+  border-bottom: 2px solid #5e4444;
+  padding-bottom: 10px;
+}
+
+.cart ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.cart li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 0;
+  border-bottom: 1px solid #431d1d;
+  font-size: 16px;
+  color: #333;
+}
+
+.cart li:last-child {
+  border-bottom: none;
+}
+
+.cart-total {
+  font-weight: bold;
+  text-align: right;
+  margin-top: 20px;
+  font-size: 18px;
+  color: #007bff;
+}
+
+/* Remove Button inside Cart */
+.cart .remove-btn {
+  margin-left: 10px;
+  background-color: #dc3545;
+  padding: 6px 10px;
+  font-size: 14px;
+  border-radius: 5px;
+  cursor: pointer;
+  border: none;
+  color: white;
+}
+
+.cart .remove-btn:hover {
+  background-color: #c82333;
+}
+
+/* Close Cart Button */
+.close-cart-btn {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  background: #555;
+  color: #dbc3ad;
+  border: none;
+  padding: 6px 12px;
+  font-size: 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.close-cart-btn:hover {
+  background-color: #333;
+}
+
+
+
+/* Footer */
+#footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #f4f4f4;
+  color: #333;
+  font-size: 18px;
+  margin-top: 40px;
+  border-top: 1px solid #ccc;
+}
+
+.footer-nav {
+  background-color: #007bff;
+  color: white;
+  padding: 15px;
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+  box-shadow: 0 -2px 5px rgba(0,0,0,0.1);
+  border-top: 2px solid #0056b3;
+}
+
+.footer-nav p {
+  margin: 0;
+}
+
+.footer-nav strong {
+  color: #ffdd57;
+}
+
+/* Remove Button Style */
+.remove-btn {
+  margin-left: 15px;
+  background-color: #ff4d4d;
+  border: none;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.remove-btn:hover {
+  background-color: #e60000;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .nav-bar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-right {
+    margin-top: 10px;
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+  }
+
+  .search-container input {
+    width: 100%;
+  }
+
+  .product {
+    width: 90%;
+  }
+
+  .cart {
+    width: 90%;
+  }
+
+  #product-list {
+    padding: 1rem;
+  }
+
+  .cart {
+    width: 95%;
+    padding: 1.2rem;
+    font-size: 16px;
+    max-height: 80vh;
+    overflow-y: auto;
+  }
+  
+  .cart li {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+  }
+  
+  .cart .remove-btn {
+    align-self: flex-end;
+    margin-top: 6px;
+    font-size: 13px;
+    padding: 5px 10px;
+  }
+  
+  .close-cart-btn {
+    top: 10px;
+    right: 10px;
+    font-size: 12px;
+    padding: 4px 8px;
+  }
+  
+}
+
+/* Back to Top Button (Optional) */
+#backToTop {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 14px;
+  border-radius: 50%;
+  font-size: 20px;
+  cursor: pointer;
+  display: none;
+  z-index: 999;
+}
+
+#backToTop:hover {
+  background-color: #0056b3;
+}

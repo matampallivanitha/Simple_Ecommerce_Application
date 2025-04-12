@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Electronics Store</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+</head>
+<body>
+  <header>
+    <h1>Vanitha Electronics Store</h1>
+  </header>
+
+  <!-- Navigation Bar -->
+  <nav class="nav-bar">
+    <div class="nav-left">
+      <ul>
+        <li onclick="filterByCategory('All')">All</li>
+        <li onclick="filterByCategory('Mobile')">Mobiles</li>
+        <li onclick="filterByCategory('PC')">PC</li>
+        <li onclick="filterByCategory('Laptop')">Laptops</li>
+        <li onclick="filterByCategory('Bluetooth')">Bluetooth</li>
+        <li onclick="filterByCategory('Headphones')">Headphones</li>
+      </ul>
+    </div>
+    <div class="nav-right">
+      <div class="search-container">
+        <input type="text" id="searchBox" placeholder="Search products..." />
+        <button type="button" onclick="searchProducts()">🔍</button>
+      </div>
+      <button onclick="toggleCart()">🛒 View Cart</button>
+    </div>
+  </nav>
+
+<!-- Shopping Cart Box -->
+<div class="cart" id="cart-box">
+  <button onclick="hideCart()" class="close-cart-btn">Close</button>
+  <h2>Shopping Cart</h2>
+  <ul id="cart-items">
+    <!-- Items added dynamically -->
+  </ul>
+  <div class="cart-total" id="cart-total">Total: Rs.0</div>
+</div>
+  
+  <!-- Product List -->
+  <div id="product-list"></div>
+  <footer style="background-color: #1e1e1e; color: white; text-align: center; padding: 15px; margin-top: 30px;">
+    🙏 Thank you for visiting <strong>Vanitha Electronics Store</strong>!
+  </footer>
+  <script src="/script.js"></script>
+</body>
+</html>
